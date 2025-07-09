@@ -29,7 +29,7 @@ const Index = () => {
           </p>
           <Button 
             size="lg" 
-            className="text-body px-8 py-4 minimal-hover minimal-focus shadow-soft"
+            className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
           >
             Request Access
           </Button>
@@ -128,7 +128,7 @@ const Index = () => {
           <div className="space-y-4">
             <Button 
               size="lg" 
-              className="w-full md:w-auto text-body px-12 py-4 minimal-hover minimal-focus shadow-soft"
+              className="w-full md:w-auto text-white px-12 py-4 minimal-hover minimal-focus shadow-soft"
             >
               Request Early Access
             </Button>
