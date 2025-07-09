@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { BusinessFlow } from "@/components/BusinessFlow";
 
 const Index = () => {
   return (
@@ -74,19 +75,13 @@ const Index = () => {
             Transform complex data into clear understanding. Every element designed to reduce cognitive load and amplify insight.
           </p>
           
-          {/* Minimal Data Visualization */}
-          <div className="grid grid-cols-5 gap-2 max-w-md mx-auto mb-8">
-            {[20, 40, 60, 35, 80].map((height, index) => (
-              <div 
-                key={index}
-                className="bg-primary opacity-20 transition-all duration-300 hover:opacity-60"
-                style={{ height: `${height}px` }}
-              />
-            ))}
+          {/* Business Operations Flow */}
+          <div className="flex justify-center mb-8">
+            <BusinessFlow />
           </div>
           
           <div className="text-small opacity-40 tracking-wide">
-            Data visualization reimagined
+            Operations pipeline visualization
           </div>
         </div>
       </section>
