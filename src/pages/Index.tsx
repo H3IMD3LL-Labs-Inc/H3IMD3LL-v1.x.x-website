@@ -70,9 +70,6 @@ const Index = () => {
             {typedText}
             <span className="animate-plus">|</span>
           </h1>
-          <div className="text-medium font-bold tracking-wide mb-6">
-            Insights_as_a_Service
-          </div>
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
             A better way to manage, view and interact with your data to make better decisions.
           </p>
