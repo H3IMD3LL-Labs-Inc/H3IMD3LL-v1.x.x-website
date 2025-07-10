@@ -115,14 +115,14 @@ const Index = () => {
             <Card className="p-8 shadow-minimal border-0 bg-card">
               <div className="text-title mb-4">View</div>
               <p className="text-body opacity-70 leading-relaxed">
-                Visualize insights with minimal complexity. See what matters, nothing more. Not another spreadsheet.
+                Visualize data into actionable information with minimal complexity. See what matters, nothing more. Not just another spreadsheet.
               </p>
             </Card>
             
             <Card className="p-8 shadow-minimal border-0 bg-card">
               <div className="text-title mb-4">Interact</div>
               <p className="text-body opacity-70 leading-relaxed">
-                Direct engagement with your data. Every interaction purposeful and immediate. See what's happening in real-time.
+                Directly interact with your data. Every interaction purposeful and immediate. See what's happening in real-time.
               </p>
             </Card>
           </div>
