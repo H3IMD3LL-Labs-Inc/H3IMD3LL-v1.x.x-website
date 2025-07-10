@@ -7,45 +7,51 @@ const Index = () => {
   const fullText = "H3IMD3LL";
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [loopIndex, setLoopIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [phase, setPhase] = useState<"intro" | "typing">("intro");
 
   useEffect(() => {
-    if (isPaused) return;
+    if (phase === "intro") {
+      // Show "Introducing" for 1.5 seconds then start typing
+      const timer = setTimeout(() => {
+        setPhase("typing");
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [phase]);
+
+  useEffect(() => {
+    if (phase !== "typing" || isPaused) return;
 
     const typingSpeed = isDeleting ? 120 : 200;
 
     const timer = setTimeout(() => {
-      const current = fullText;
-
       if (!isDeleting) {
-        const nextText = current.slice(0, typedText.length + 1);
-        setTypedText(nextText);
-
-        if (nextText === current) {
+        const next = fullText.slice(0, typedText.length + 1);
+        setTypedText(next);
+        if (next === fullText) {
           setIsPaused(true);
           setTimeout(() => {
             setIsPaused(false);
             setIsDeleting(true);
-          }, 2000); // pause before deleting
+          }, 2000); // Pause after full text
         }
       } else {
-        const nextText = current.slice(0, typedText.length - 1);
-        setTypedText(nextText);
-
-        if (nextText === "") {
+        const next = fullText.slice(0, typedText.length - 1);
+        setTypedText(next);
+        if (next === "") {
           setIsPaused(true);
           setTimeout(() => {
             setIsPaused(false);
             setIsDeleting(false);
-            setLoopIndex(loopIndex + 1);
-          }, 1000); // pause before retyping
+            setPhase("intro"); // Go back to intro after delete
+          }, 1000);
         }
       }
     }, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [typedText, isDeleting, loopIndex, isPaused]); 
+  }, [typedText, isDeleting, isPaused, phase]);
 
   return (
     <div className="min-h-screen bg-background">
@@ -66,9 +72,17 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-hero mb-8">
-            {typedText}
-            <span className="animate-plus">|</span>
+          <h1 className="text-hero mb-8 h-28 flex items-center justify-center relative overflow-hidden">
+            {phase === "intro" ? (
+              <span className="absolute transition-opacity duration-200 opacity-100">
+                Introducing
+              </span>
+            ) : (
+              <span className="absolute transition-opacity duration-1000 opacity-100">
+                {typedText}
+              <span className="animate-plus">|</span>
+            </span>
+            )}
           </h1>
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
             A better way to manage, view and interact with your data to make better decisions.
@@ -78,9 +92,12 @@ const Index = () => {
               size="lg" 
               className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
             >
-              Try H3IMD3LL?
-            </Button>              
-          </a> 
+              Try H3IMD3LL
+            </Button>
+          </a>
+          <div className="text-small opacity-40 tracking-wide mt-4">
+            Limited beta available
+          </div>
         </div>
       </section>
 
@@ -217,15 +234,14 @@ const Index = () => {
             Join forward-thinking organizations already transforming their data experience.
           </p>
           <div className="space-y-4">
-            <Button 
-              size="lg" 
-              className="w-full md:w-auto text-white px-12 py-4 minimal-hover minimal-focus shadow-soft"
-            >
-              Contact Support
-            </Button>
-            <div className="text-small opacity-40 tracking-wide">
-              Limited beta availability
-            </div>
+            <a href="https://form.typeform.com/to/fFmymfEC" target="_blank" rel="noopener noreferrer">
+              <Button 
+                size="lg" 
+                className="w-full md:w-auto text-white px-12 py-4 minimal-hover minimal-focus shadow-soft"
+              >
+                Contact Support
+              </Button> 
+            </a>
           </div>
         </div>
       </section>
@@ -238,7 +254,7 @@ const Index = () => {
               © 2025 H3IMD3LL Labs, Inc.
             </div>
             <div className="text-small opacity-40">
-              Built in Kenya
+              A.N
             </div>
           </div>
         </div>
