@@ -73,12 +73,14 @@ const Index = () => {
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
             A better way to manage, view and interact with your data to make better decisions.
           </p>
-          <Button 
-            size="lg" 
-            className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
-          >
-            Request Access
-          </Button>
+          <a href="https://form.typeform.com/to/pldIABVo" target="_blank" rel="noopener noreferrer">
+            <Button 
+              size="lg" 
+              className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
+            >
+              Try H3IMD3LL?
+            </Button>              
+          </a> 
         </div>
       </section>
 
@@ -145,7 +147,7 @@ const Index = () => {
             <div className="space-y-4">
               <div className="text-body">Enterprise Security</div>
               <div className="text-body">Real-time Processing</div>
-              <div className="text-body">API-first Architecture</div>
+              <div className="text-body">Easy-to-use Design</div>
             </div>
             <div className="space-y-4 opacity-70">
               <div className="text-body">Cloud Native</div>
@@ -159,7 +161,7 @@ const Index = () => {
       {/* Pricing Section */}
       <section className="py-20 px-6 bg-background">
         <div className="max-w-5xl mx-auto text-center">
-          <div className="text-title mb-8">Pilot Pricing</div>
+          <div className="text-title mb-8">Beta Pricing</div>
             <p className="text-body mb-12 max-w-2xl mx-auto opacity-70">
               Flexible pricing based on your business scale. No hidden fees. Just clarity and value from day one.
             </p>
@@ -219,7 +221,7 @@ const Index = () => {
               size="lg" 
               className="w-full md:w-auto text-white px-12 py-4 minimal-hover minimal-focus shadow-soft"
             >
-              Request Early Access
+              Contact Support
             </Button>
             <div className="text-small opacity-40 tracking-wide">
               Limited beta availability
