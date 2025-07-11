@@ -9,6 +9,33 @@ const Index = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const [phase, setPhase] = useState<"intro" | "typing">("intro");
+  const launchDate = new Date("2025-07-21T21:00:00Z");
+
+  const calculateTimeLeft = () => {
+    const difference = launchDate.getTime() - new Date().getTime();
+    let timeLeft = {};
+
+    if (difference > 0) {
+      timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / (1000 * 60)) % 60),
+        seconds: Math.floor((difference / 1000) % 60), 
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     if (phase === "intro") {
@@ -62,9 +89,6 @@ const Index = () => {
             <div className="text-small font-medium tracking-wide">
               H3IMD3LL Labs, Inc.
             </div>
-            <div className="text-small tracking-wide opacity-60">
-              v1.x.x
-            </div>
           </div>
         </div>
       </nav>
@@ -74,14 +98,14 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-hero mb-8 h-28 flex items-center justify-center relative overflow-hidden">
             {phase === "intro" ? (
-              <span className="absolute transition-opacity duration-200 opacity-100">
+              <span className="absolute transition-opacity duration-500 opacity-100">
                 Introducing
               </span>
             ) : (
               <span className="absolute transition-opacity duration-1000 opacity-100">
                 {typedText}
               <span className="animate-plus">|</span>
-            </span>
+              </span>
             )}
           </h1>
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
@@ -92,11 +116,12 @@ const Index = () => {
               size="lg" 
               className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
             >
-              Try H3IMD3LL
+              Try H3IMD3LL (Beta)
             </Button>
           </a>
           <div className="text-small opacity-40 tracking-wide mt-4">
-            Limited beta available
+            Publicly Available in:{" "}
+            {timeLeft.days ?? 0}d {timeLeft.hours ?? 0}h {timeLeft.minutes ?? 0}m {timeLeft.seconds ?? 0}s 
           </div>
         </div>
       </section>
@@ -136,7 +161,7 @@ const Index = () => {
             Better Decisions
           </div>
           <p className="text-body mb-12 max-w-2xl mx-auto opacity-70">
-            Transform complex data into clear understanding. For businesses looking to simply understand; When, Where, How, Why!
+            Transform complex data into clear understanding. For organisations looking to simply understand; When, Where, How, Why!
           </p>
           
           {/* Business Operations Flow */}
@@ -156,7 +181,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <div className="text-title mb-4">Technical Foundation</div>
             <p className="text-body opacity-70 max-w-xl mx-auto">
-              Built on principles of performance, security, and scalability. Everything that happens in your business is a data point, we help you understand how it all comes together at the "bigger picture" level.
+              Built on principles of performance, security, and scalability. Everything that happens in your business is a data point, we help you understand how it all comes together as a "big picture".
             </p>
           </div>
           
@@ -176,7 +201,7 @@ const Index = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-6 bg-background">
+      {/*<section className="py-20 px-6 bg-background">
         <div className="max-w-5xl mx-auto text-center">
           <div className="text-title mb-8">Beta Pricing</div>
             <p className="text-body mb-12 max-w-2xl mx-auto opacity-70">
@@ -184,7 +209,7 @@ const Index = () => {
             </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-          {/* Small Biz */}
+
           <Card className="p-6 bg-card shadow-minimal border-0">
             <div className="text-title mb-2">Small Business</div>
                 <ul className="space-y-2 text-body opacity-70 leading-relaxed list-disc pl-4">
@@ -196,7 +221,6 @@ const Index = () => {
                 </ul>
           </Card>
 
-          {/* Mid Biz */}
           <Card className="p-6 bg-card shadow-minimal border-0">
             <div className="text-title mb-2">Mid-Sized Business</div>
                 <ul className="space-y-2 text-body opacity-70 leading-relaxed list-disc pl-4">
@@ -208,7 +232,6 @@ const Index = () => {
                 </ul>
           </Card>
 
-          {/* Enterprise */}
           <Card className="p-6 bg-card shadow-minimal border-0">
             <div className="text-title mb-2">Enterprise(Coming Soon)</div>
                 <ul className="space-y-2 text-body opacity-70 leading-relaxed list-disc pl-4">
@@ -221,7 +244,7 @@ const Index = () => {
           </Card>
         </div>
       </div>
-    </section>
+    </section> /*}
       
 
       {/* Call to Action */}
@@ -231,9 +254,10 @@ const Index = () => {
             Experience H3IMD3LL
           </div>
           <p className="text-body mb-12 opacity-70">
-            Join forward-thinking organizations already transforming their data experience.
+            Join forward-thinking organizations already transforming their data experience. Still unsure?
           </p>
-          <div className="space-y-4">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            {/* Contact Support Button */}
             <a href="https://form.typeform.com/to/fFmymfEC" target="_blank" rel="noopener noreferrer">
               <Button 
                 size="lg" 
@@ -241,6 +265,17 @@ const Index = () => {
               >
                 Contact Support
               </Button> 
+            </a>
+            
+            {/* Company Blog Post button */}
+            <a href="/blog" rel="noopener noreferrer">
+              <Button
+                variant="outline"
+                size="lg"
+                className="w-full md:w-auto px-12 py-4 minimal-hover minimal-focus"
+              >
+                Read Blog
+              </Button>
             </a>
           </div>
         </div>
@@ -254,7 +289,7 @@ const Index = () => {
               © 2025 H3IMD3LL Labs, Inc.
             </div>
             <div className="text-small opacity-40">
-              A.N
+              v1.x.x
             </div>
           </div>
         </div>
