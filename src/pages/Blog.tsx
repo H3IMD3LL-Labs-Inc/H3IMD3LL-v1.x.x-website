@@ -95,7 +95,7 @@ const Blog = () => {
               </Button>             
             </a>
             <div className="text-small font-medium tracking-wide">
-              H3IMD3LL Labs, Inc.
+              Engineering
             </div>
           </div>
         </div>
@@ -104,12 +104,13 @@ const Blog = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-hero mb-8 h-28 flex items-center justify-center relative overflow-hidden">
-            <span className="text-center w-full absolute transition-opacity duration-1000 opacity-100 whitespace-nowrap inline-block">
+          <h1 className="text-3xl sm:text-5xl font-bold mb-8 min-h-[4rem] flex items-center justify-center relative text-center">
+            <span className="absolute inset-x-0 px-4 transition-opacity duration-1000 opacity-100 whitespace-nowrap overflow-hidden text-ellipsis">
               {typedText}
             <span className="animate-plus">|</span>
             </span>
           </h1>
+          
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
             Honestly, we found ourselves having a hard time answering this question. Because at its core we the H3IMD3LL Labs Engineering team know it's good software, I mean we use it ourselves to run our business. But how do we transfer the same use-case to other business' in different industries while also finding new use-cases?
           </p>

@@ -96,9 +96,9 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-hero mb-8 min-h-[7rem] flex items-center justify-center relative text-center">
+          <h1 className="text-hero mb-8 h-28 flex items-center justify-center relative">
             {phase === "intro" ? (
-              <span className="absolute inset-x-0 px-4 transition-opacity duration-500 opacity-100">
+              <span className="absolute transition-opacity duration-500 opacity-100">
                 Introducing
               </span>
             ) : (
