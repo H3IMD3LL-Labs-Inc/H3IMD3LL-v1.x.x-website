@@ -20,7 +20,7 @@ const Index = () => {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
         minutes: Math.floor((difference / (1000 * 60)) % 60),
-        seconds: Math.floor((difference / 1000) % 60), 
+        seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -89,6 +89,24 @@ const Index = () => {
             <div className="text-small font-medium tracking-wide">
               H3IMD3LL Labs, Inc.
             </div>
+
+            <a
+              href="https://github.com/H3IMD3LL-Labs-Inc/H3IMD3LL-v1.x.x"
+              target="_blanc"
+              rel="noopener noreferrer"
+              className="text-foreground hover:text-muted-foreground transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="ml-4"
+              >
+                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008.02 10.94c.6.1.82-.26.82-.58v-2.17c-3.25.71-3.94-1.56-3.94-1.56a3.11 3.11 0 00-1.3-1.7c-1.06-.73.08-.72.08-.72a2.46 2.46 0 011.8 1.21 2.5 2.5 0 003.43.98 2.5 2.5 0 01.74-1.56c-2.6-.3-5.34-1.3-5.34-5.79a4.53 4.53 0 011.2-3.14 4.2 4.2 0 01.11-3.1s.98-.31 3.2 1.2a11 11 0 015.83 0c2.2-1.51 3.18-1.2 3.18-1.2a4.2 4.2 0 01.12 3.1 4.53 4.53 0 011.2 3.14c0 4.5-2.75 5.49-5.37 5.78a2.8 2.8 0 01.8 2.16v3.2c0 .32.21.69.83.57A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z" />
+              </svg>
+            </a>
           </div>
         </div>
       </nav>
@@ -109,175 +127,16 @@ const Index = () => {
             )}
           </h1>
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
-            A better way to manage, view and interact with your data to make better decisions.
+            A source-available data platform that allows you to achieve factual reasoning when using various LLMs. What does this mean? Check out what our Engineers have to say!
           </p>
-          <a href="https://form.typeform.com/to/pldIABVo" target="_blank" rel="noopener noreferrer">
-            <Button 
-              size="lg" 
-              className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
+          <a href="/blog" rel="noopener noreferrer">
+            <Button
+                size="lg"
+                className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
             >
-              Try H3IMD3LL (Beta)
+              Engineering Blog
             </Button>
           </a>
-          <div className="text-small opacity-40 tracking-wide mt-4">
-            Publicly Available in:{" "}
-            {timeLeft.days ?? 0}d {timeLeft.hours ?? 0}h {timeLeft.minutes ?? 0}m {timeLeft.seconds ?? 0}s 
-          </div>
-        </div>
-      </section>
-
-      {/* Product Overview */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 shadow-minimal border-0 bg-card">
-              <div className="text-title mb-4">Manage</div>
-              <p className="text-body opacity-70 leading-relaxed">
-                Centralize and organize your data with precision. Built for clarity and control. At any business scale.
-              </p>
-            </Card>
-            
-            <Card className="p-8 shadow-minimal border-0 bg-card">
-              <div className="text-title mb-4">View</div>
-              <p className="text-body opacity-70 leading-relaxed">
-                Visualize data into actionable information with minimal complexity. See what matters, nothing more. Not just another spreadsheet.
-              </p>
-            </Card>
-            
-            <Card className="p-8 shadow-minimal border-0 bg-card">
-              <div className="text-title mb-4">Interact</div>
-              <p className="text-body opacity-70 leading-relaxed">
-                Directly interact with your data. Every interaction purposeful and immediate. See what's happening in real-time.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Data Visualization Hint */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="text-title mb-8">
-            Better Decisions
-          </div>
-          <p className="text-body mb-12 max-w-2xl mx-auto opacity-70">
-            Transform complex data into clear understanding. For organisations looking to simply understand; When, Where, How, Why!
-          </p>
-          
-          {/* Business Operations Flow */}
-          <div className="flex justify-center mb-8">
-            <BusinessFlow />
-          </div>
-          
-          <div className="text-small opacity-40 tracking-wide">
-            Operations pipeline visualization
-          </div>
-        </div>
-      </section>
-
-      {/* Technical Specifications */}
-      <section className="py-20 px-6 bg-secondary/30">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <div className="text-title mb-4">Technical Foundation</div>
-            <p className="text-body opacity-70 max-w-xl mx-auto">
-              Built on principles of performance, security, and scalability. Everything that happens in your business is a data point, we help you understand how it all comes together as a "big picture".
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <div className="text-body">Enterprise Security</div>
-              <div className="text-body">Real-time Processing</div>
-              <div className="text-body">Easy-to-use Design</div>
-            </div>
-            <div className="space-y-4 opacity-70">
-              <div className="text-body">Cloud Native</div>
-              <div className="text-body">Minimal Configuration</div>
-              <div className="text-body">Infinite Scale</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      {/*<section className="py-20 px-6 bg-background">
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="text-title mb-8">Beta Pricing</div>
-            <p className="text-body mb-12 max-w-2xl mx-auto opacity-70">
-              Flexible pricing based on your business scale. No hidden fees. Just clarity and value from day one.
-            </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
-
-          <Card className="p-6 bg-card shadow-minimal border-0">
-            <div className="text-title mb-2">Small Business</div>
-                <ul className="space-y-2 text-body opacity-70 leading-relaxed list-disc pl-4">
-                  <li>Onboarding assistance</li>
-                  <li>Custom data points</li>
-                  <li>1–3 stores supported</li>
-                  <li>Full provisioning & syncing</li>
-                  <li>Email support</li>
-                </ul>
-          </Card>
-
-          <Card className="p-6 bg-card shadow-minimal border-0">
-            <div className="text-title mb-2">Mid-Sized Business</div>
-                <ul className="space-y-2 text-body opacity-70 leading-relaxed list-disc pl-4">
-                  <li>Everything in `Small Business`</li>
-                  <li>Multi-store architecture</li>
-                  <li>Schema version control</li>
-                  <li>Priority updates</li>
-                  <li>Dedicated technical support</li>
-                </ul>
-          </Card>
-
-          <Card className="p-6 bg-card shadow-minimal border-0">
-            <div className="text-title mb-2">Enterprise(Coming Soon)</div>
-                <ul className="space-y-2 text-body opacity-70 leading-relaxed list-disc pl-4">
-                  <li>Everything in `Mid-Sized Business`</li>
-                  <li>Unlimited stores & users</li>
-                  <li>White-labeled deployment</li>
-                  <li>On-premise or air-gapped</li>
-                  <li>Dedicated support team</li>
-                </ul>
-          </Card>
-        </div>
-      </div>
-    </section> /*}
-      
-
-      {/* Call to Action */}
-      <section className="py-20 px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="text-title mb-8">
-            Experience H3IMD3LL
-          </div>
-          <p className="text-body mb-12 opacity-70">
-            Join forward-thinking organizations already transforming their data experience. Still unsure?
-          </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            {/* Contact Support Button */}
-            <a href="https://form.typeform.com/to/fFmymfEC" target="_blank" rel="noopener noreferrer">
-              <Button 
-                size="lg" 
-                className="w-full md:w-auto text-white px-12 py-4 minimal-hover minimal-focus shadow-soft"
-              >
-                Contact Support
-              </Button> 
-            </a>
-            
-            {/* Company Blog Post button */}
-            <a href="/blog" rel="noopener noreferrer">
-              <Button
-                variant="outline"
-                size="lg"
-                className="w-full md:w-auto px-12 py-4 minimal-hover minimal-focus"
-              >
-                Read Blog
-              </Button>
-            </a>
-          </div>
         </div>
       </section>
 
