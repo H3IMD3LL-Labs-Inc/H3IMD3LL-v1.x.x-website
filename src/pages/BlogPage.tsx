@@ -32,9 +32,9 @@ export default function BlogPage() {
     }, []);
 
     return (
-        <div style={{ padding: "2rem" }}>
-            <h1>Engineering Blog</h1>
-            <div style={{ display: "grid", gap: "1rem", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
+        <div style={{ padding: "3rem" }}>
+            <h1>H3IMD3LL Labs Engineering Blog</h1>
+            <div style={{ display: "grid", gap: "5rem", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
                 {allPosts.map(({ slug, metadata }) => (
                     <Link
                         to={`/blog/${slug}`}
@@ -49,9 +49,9 @@ export default function BlogPage() {
                             boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
                         }}
                     >
-                        <h2>{metadata.title}</h2>
+                        <h2><strong>{metadata.title}</strong></h2>
                         <p style={{ fontSize: "0.9rem", color: "#555" }}>{metadata.date}</p>
-                        <p>{metadata.excerpt || "No preview available..."}</p>
+                        <p>{metadata.quote || "No preview available..."}</p>
                     </Link>
                 ))}
             </div>
