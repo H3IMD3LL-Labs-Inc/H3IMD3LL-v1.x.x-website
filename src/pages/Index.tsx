@@ -89,24 +89,43 @@ const Index = () => {
             <div className="text-small font-medium tracking-wide">
               H3IMD3LL Labs, Inc.
             </div>
-
-            <a
-              href="https://github.com/H3IMD3LL-Labs-Inc/H3IMD3LL-v1.x.x"
-              target="_blanc"
-              rel="noopener noreferrer"
-              className="text-foreground hover:text-muted-foreground transition-colors"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                className="ml-4"
+            <div className="flex items-center">
+              <a
+                  href="https://github.com/H3IMD3LL-Labs-Inc/H3IMD3LL-v1.x.x"
+                  target="_blanc"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-muted-foreground transition-colors"
               >
-                <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008.02 10.94c.6.1.82-.26.82-.58v-2.17c-3.25.71-3.94-1.56-3.94-1.56a3.11 3.11 0 00-1.3-1.7c-1.06-.73.08-.72.08-.72a2.46 2.46 0 011.8 1.21 2.5 2.5 0 003.43.98 2.5 2.5 0 01.74-1.56c-2.6-.3-5.34-1.3-5.34-5.79a4.53 4.53 0 011.2-3.14 4.2 4.2 0 01.11-3.1s.98-.31 3.2 1.2a11 11 0 015.83 0c2.2-1.51 3.18-1.2 3.18-1.2a4.2 4.2 0 01.12 3.1 4.53 4.53 0 011.2 3.14c0 4.5-2.75 5.49-5.37 5.78a2.8 2.8 0 01.8 2.16v3.2c0 .32.21.69.83.57A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z" />
-              </svg>
-            </a>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="ml-4"
+                >
+                  <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008.02 10.94c.6.1.82-.26.82-.58v-2.17c-3.25.71-3.94-1.56-3.94-1.56a3.11 3.11 0 00-1.3-1.7c-1.06-.73.08-.72.08-.72a2.46 2.46 0 011.8 1.21 2.5 2.5 0 003.43.98 2.5 2.5 0 01.74-1.56c-2.6-.3-5.34-1.3-5.34-5.79a4.53 4.53 0 011.2-3.14 4.2 4.2 0 01.11-3.1s.98-.31 3.2 1.2a11 11 0 015.83 0c2.2-1.51 3.18-1.2 3.18-1.2a4.2 4.2 0 01.12 3.1 4.53 4.53 0 011.2 3.14c0 4.5-2.75 5.49-5.37 5.78a2.8 2.8 0 01.8 2.16v3.2c0 .32.21.69.83.57A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z" />
+                </svg>
+              </a>
+
+              <a
+                  href="https://x.com/heimdell_labs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forground hover:text-muted-foreground transition-colors"
+              >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="ml-4"
+                >
+                  <path d="M22.46 6.003c-.77.343-1.6.574-2.47.678a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.3 3.9 12.13 12.13 0 01-8.8-4.46 4.27 4.27 0 001.33 5.7 4.27 4.27 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.2 4.27 4.27 0 01-1.93.07 4.28 4.28 0 004 2.97 8.6 8.6 0 01-5.32 1.84c-.34 0-.68-.02-1.01-.06a12.14 12.14 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.37-.02-.56a8.72 8.72 0 002.14-2.23z" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
       </nav>
