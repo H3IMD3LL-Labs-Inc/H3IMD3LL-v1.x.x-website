@@ -91,7 +91,7 @@ const Index = () => {
             </div>
             <div className="flex items-center">
               <a
-                  href="https://github.com/H3IMD3LL-Labs-Inc/H3IMD3LL-v1.x.x"
+                  href="https://github.com/H3IMD3LL-Labs-Inc"
                   target="_blanc"
                   rel="noopener noreferrer"
                   className="text-foreground hover:text-muted-foreground transition-colors"
@@ -146,7 +146,7 @@ const Index = () => {
             )}
           </h1>
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
-            A source-available data platform that allows you to achieve factual reasoning when using various LLMs. What does this mean? Check out what our Engineers have to say!
+            A data platform that allows you to achieve factual reasoning using various LLMs. What does this mean? Check out what our Engineers have to say!
           </p>
           <a href="/blog" rel="noopener noreferrer">
             <Button
@@ -167,7 +167,7 @@ const Index = () => {
               © 2025 H3IMD3LL Labs, Inc.
             </div>
             <div className="text-small opacity-40">
-              v1.x.x
+              v1.0.x
             </div>
           </div>
         </div>

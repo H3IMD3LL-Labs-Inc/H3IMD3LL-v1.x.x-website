@@ -34,7 +34,7 @@ export default function BlogPage() {
     return (
         <div style={{ padding: "3rem" }}>
             <h1 style={{ marginBottom: "2rem" }}><strong>H3IMD3LL Labs Engineering Blog</strong></h1>
-            <p style={{ marginBottom: "1rem" }}>Our Engineers and Contributors are working tirelessly to improve H3IMD3LL. Due to the vast amount of work required for this, we've decided to create this blog post to share news, updates and any internal information about H3IMD3LL.</p>
+            <p style={{ marginBottom: "1rem" }}>Our Engineering team is working tirelessly to improve H3IMD3LL. Due to the vast amount of work required for this, we've decided to create this blog to share news, updates and any internal information about H3IMD3LL.</p>
             <div style={{ display: "grid", gap: "5rem", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
                 {allPosts.map(({ slug, metadata }) => (
                     <Link
