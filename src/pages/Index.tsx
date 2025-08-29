@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { BusinessFlow } from "@/components/BusinessFlow";
 
 const Index = () => {
-  const fullText = "H3IMD3LL";
+  const fullText = "Welcome";
   const [typedText, setTypedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
@@ -91,36 +91,36 @@ const Index = () => {
             </div>
             <div className="flex items-center">
               <a
-                  href="https://github.com/H3IMD3LL-Labs-Inc"
-                  target="_blanc"
-                  rel="noopener noreferrer"
-                  className="text-foreground hover:text-muted-foreground transition-colors"
+                href="https://github.com/H3IMD3LL-Labs-Inc"
+                target="_blanc"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-muted-foreground transition-colors"
               >
                 <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="ml-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="ml-4"
                 >
                   <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008.02 10.94c.6.1.82-.26.82-.58v-2.17c-3.25.71-3.94-1.56-3.94-1.56a3.11 3.11 0 00-1.3-1.7c-1.06-.73.08-.72.08-.72a2.46 2.46 0 011.8 1.21 2.5 2.5 0 003.43.98 2.5 2.5 0 01.74-1.56c-2.6-.3-5.34-1.3-5.34-5.79a4.53 4.53 0 011.2-3.14 4.2 4.2 0 01.11-3.1s.98-.31 3.2 1.2a11 11 0 015.83 0c2.2-1.51 3.18-1.2 3.18-1.2a4.2 4.2 0 01.12 3.1 4.53 4.53 0 011.2 3.14c0 4.5-2.75 5.49-5.37 5.78a2.8 2.8 0 01.8 2.16v3.2c0 .32.21.69.83.57A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z" />
                 </svg>
               </a>
 
               <a
-                  href="https://x.com/heimdell_labs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-forground hover:text-muted-foreground transition-colors"
+                href="https://x.com/heimdell_labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forground hover:text-muted-foreground transition-colors"
               >
                 <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    className="ml-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="ml-4"
                 >
                   <path d="M22.46 6.003c-.77.343-1.6.574-2.47.678a4.3 4.3 0 001.88-2.37 8.59 8.59 0 01-2.72 1.04 4.28 4.28 0 00-7.3 3.9 12.13 12.13 0 01-8.8-4.46 4.27 4.27 0 001.33 5.7 4.27 4.27 0 01-1.94-.54v.05a4.28 4.28 0 003.43 4.2 4.27 4.27 0 01-1.93.07 4.28 4.28 0 004 2.97 8.6 8.6 0 01-5.32 1.84c-.34 0-.68-.02-1.01-.06a12.14 12.14 0 006.56 1.92c7.88 0 12.2-6.53 12.2-12.2 0-.19-.01-.37-.02-.56a8.72 8.72 0 002.14-2.23z" />
                 </svg>
@@ -134,24 +134,19 @@ const Index = () => {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-hero mb-8 h-28 flex items-center justify-center relative">
-            {phase === "intro" ? (
-              <span className="absolute transition-opacity duration-500 opacity-100">
-                Introducing
-              </span>
-            ) : (
-              <span className="absolute transition-opacity duration-1000 opacity-100">
-                {typedText}
+            <span className="absolute transition-opacity duration-1000 opacity-100">
+              {typedText}
               <span className="animate-plus">|</span>
-              </span>
-            )}
+            </span>
           </h1>
           <p className="text-subtitle mb-12 max-w-2xl mx-auto opacity-80">
-            A data platform that allows you to achieve factual reasoning using various LLMs. What does this mean? Check out what our Engineers have to say!
+            We're building cool Open-Source tools for Developers :-) P.S: We
+            pivoted from building a surveillance tool.
           </p>
           <a href="/blog" rel="noopener noreferrer">
             <Button
-                size="lg"
-                className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
+              size="lg"
+              className="text-white px-8 py-4 minimal-hover minimal-focus shadow-soft"
             >
               Engineering Blog
             </Button>
@@ -166,9 +161,7 @@ const Index = () => {
             <div className="text-small opacity-40">
               © 2025 H3IMD3LL Labs, Inc.
             </div>
-            <div className="text-small opacity-40">
-              v1.0.x
-            </div>
+            <div className="text-small opacity-40">v1.0.x</div>
           </div>
         </div>
       </footer>
@@ -177,4 +170,3 @@ const Index = () => {
 };
 
 export default Index;
-
